@@ -5,13 +5,11 @@ require_relative 'board.rb'
 
 
 test_board = Board.new
-
 test_board.display_board
-jake = Player.new("Jake")
-mike = Player.new("Mike")
+test_board.update_board(2, "X")
+test_board.display_board
+test_board.update_board(9, "O")
+test_board.display_board
 
-puts jake.player_number
-puts mike.player_number
-puts jake.symbol
-puts mike.symbol
+
 

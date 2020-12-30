@@ -19,14 +19,14 @@ class Board
 
   public 
 
-	def display_board
-		@@board_array.each do |row|
+  def display_board
+	  @@board_array.each do |row|
       print "#{row[0]} | #{row[1]} | #{row[2]}"
       print "\n"
       if row != @@board_array[2]
         puts "----------"
       end
-		end
+	  end
   end
 
   def update_board(input, symbol)

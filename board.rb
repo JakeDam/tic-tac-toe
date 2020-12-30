@@ -43,8 +43,5 @@ class Board
     #TO DO
   end
 
-
-
-
 end
 		

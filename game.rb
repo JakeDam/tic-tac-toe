@@ -4,6 +4,7 @@ class Game
     @player2 = player2
     @board = board
   end
+end
 
 
     

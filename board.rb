@@ -9,6 +9,7 @@ class Board
     [[0, 0], [1, 1], [2, 2]], 
     [[0, 2], [1, 1], [2, 0]]
   ]
+
   @@board_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
   private
@@ -39,8 +40,10 @@ class Board
     end
   end
 
-  def winner?
-    #TO DO
+  def winner?(symbol)
+    WIN_COMBOS.any? do |row|
+      row.all? { |cell| @@board_array[cell[0]][cell[1]] == symbol }
+    end
   end
 
 end

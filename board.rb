@@ -46,5 +46,12 @@ class Board
     end
   end
 
+  def board_full?
+    @@board_array.all? do |row|
+      row.all? { |cell| cell == "X" || cell == "O" }
+    end
+  end
+
+
 end
 		

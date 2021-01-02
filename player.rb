@@ -1,5 +1,5 @@
 class Player 
-  attr_reader :name, :player_number, :symbol 
+  attr_accessor :name, :player_number, :symbol 
   @@number_of_players = 0
 	
   def initialize(name)

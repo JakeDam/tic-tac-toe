@@ -2,15 +2,21 @@ require_relative 'interface.rb'
 require_relative 'player.rb'
 require_relative 'game.rb'
 require_relative 'board.rb'
+include Interface 
 
-test_board = Board.new
-player_1 = Player.new("Jake")
-player_2 = Player.new("Ashley")
-game = Game.new(player_1, player_2, test_board)
+def play_game
+  greeting
+  board = Board.new
+  player1 = Player.new("Player 1")
+  player2 = Player.new("Player 2")
 
-test_board.display_board
-game.play_round(player_1, test_board)
-test_board.display_board
+  player1.name = player1.get_player(player1)
+  player2.name = player2.get_player(player2)
+
+  board.display_board
+end
+
+play_game
 
 
 

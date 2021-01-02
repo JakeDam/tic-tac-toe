@@ -4,16 +4,14 @@ require_relative 'game.rb'
 require_relative 'board.rb'
 
 test_board = Board.new
-test_board.update_board(1, "X")
-test_board.update_board(2, "X")
-test_board.update_board(3, "X")
-test_board.update_board(4, "X")
-test_board.update_board(5, "X")
-test_board.update_board(6, "X")
-test_board.update_board(7, "X")
-test_board.update_board(8, "X")
+player_1 = Player.new("Jake")
+player_2 = Player.new("Ashley")
+game = Game.new(player_1, player_2, test_board)
+
 test_board.display_board
-p test_board.board_full?
+game.play_round(player_1, test_board)
+test_board.display_board
+
 
 
 

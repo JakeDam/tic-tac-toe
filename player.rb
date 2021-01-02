@@ -14,6 +14,10 @@ class Player
     @symbol = symbol
   end
 
+  def reset_players
+    @@number_of_players = 0
+  end
+
 end
 
 

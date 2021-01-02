@@ -1,3 +1,4 @@
+
 class Game 
   include Interface
 
@@ -20,6 +21,41 @@ class Game
     board.display_board
   end
 
+  def game_over(player, board)
+    puts "Game over! #{player.name} is the winner!"
+    puts "Play again? (Y/N)" 
+    while input = gets.chomp.downcase
+      if input == 'y'
+        player.reset_players
+        board.reset_board
+        play_game
+        break
+      elsif input == 'n'
+        puts "Thanks for playing!"
+        exit
+      else
+        puts "Please enter y or n"
+      end
+    end
+  end
+
+  def tie(board, player)
+    puts "It's a tie!"
+    puts "Play again? (Y/N)" 
+    while input = gets.chomp.downcase
+      if input == 'y'
+        player.reset_players
+        board.reset_board
+        play_game
+        break
+      elsif input == 'n'
+        puts "Thanks for playing!"
+        exit
+      else
+        puts "Please enter y or n"
+      end 
+    end
+  end
 end
 
 

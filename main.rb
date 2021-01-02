@@ -20,14 +20,17 @@ def play_game
   loop do 
     game.play_round(player1, board)
     if board.winner?(player1.symbol)
-      break
+      game.game_over(player1, board)
+    elsif board.board_full?
+      game.tie(board, player2)
     end
     game.play_round(player2, board)
     if board.winner?(player2.symbol)
-      break
+      game.game_over(player2, board)
+    elsif board.board_full?
+      game.tie(board, player2)
     end
   end
-
 end
 
 play_game

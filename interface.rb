@@ -9,6 +9,6 @@ module Interface
   end
 
   def prompt(player)
-    puts "#{player.name} choose a space to place an #{player.symbol}."
+    puts "#{player.name}, choose a space to place an #{player.symbol}."
   end
 end

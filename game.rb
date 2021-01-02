@@ -17,6 +17,7 @@ class Game
       end
     end
     board.update_board(input, player.symbol)
+    board.display_board
   end
 
 end

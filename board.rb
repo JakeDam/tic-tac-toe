@@ -36,9 +36,11 @@ class Board
       row.each_with_index do |cell, cell_index|
         if input == cell
           update_array_value(row_index, cell_index, symbol)
+          return true
         end
       end
     end
+    return false
   end
 
   def winner?(symbol)

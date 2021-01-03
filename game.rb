@@ -13,12 +13,13 @@ class Game
     while input = gets.chomp.to_i
       if input.between?(1,9) == false 
         puts "Please enter a valid number."
-      else  
-        break
+      elsif board.update_board(input, player.symbol) == false
+        puts "That space is taken!"
+      else
+        board.update_board(input, player.symbol)
+        board.display_board
       end
     end
-    board.update_board(input, player.symbol)
-    board.display_board
   end
 
   def game_over(player, board)

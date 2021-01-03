@@ -1,5 +1,6 @@
 <h1>Tic-Tac-Toe</h1>
 <p>A command line Tic-Tac-Toe game built with Ruby.</p>
+<a href="https://repl.it/@JakeDam24/tic-tac-toe#README.md">View on repl.it</a>
 <h2>Instructions</h2>
 <ul>
   <li>Clone repo and run main.rb in terminal or play on repl.it</li>

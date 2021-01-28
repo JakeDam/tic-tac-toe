@@ -11,6 +11,7 @@ class Game
   end
 
   def inspect_input(input, player, board)
+    prompt(player)
     if input.between?(1, 9) == false
       puts 'Please enter a valid number.'
     elsif board.update_board(input, player.symbol) == false

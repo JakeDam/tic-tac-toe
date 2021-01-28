@@ -1,23 +1,17 @@
-class Player 
-  attr_accessor :name, :player_number, :symbol 
-  @@number_of_players = 0
-	
-  def initialize(name)
+# frozen_string_literal: true
+
+# Houses information about players in the game
+class Player
+  attr_accessor :name, :player_number, :symbol
+
+  def initialize(name, number)
     @name = name
-    @@number_of_players += 1
-    @player_number = @@number_of_players
-    if @player_number == 1
-      symbol = "X"
-    else
-      symbol = "O"
-    end
+    @player_number = number
+    symbol = if @player_number == 1
+               'X'
+             else
+               'O'
+             end
     @symbol = symbol
   end
-
-  def reset_players
-    @@number_of_players = 0
-  end
-
 end
-
-

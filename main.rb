@@ -1,14 +1,14 @@
-require_relative 'interface.rb' 
-require_relative 'player.rb'
-require_relative 'game.rb'
-require_relative 'board.rb'
-include Interface 
+require_relative 'interface'
+require_relative 'player'
+require_relative 'game'
+require_relative 'board'
+include Interface
 
 def play_game
   greeting
   board = Board.new
-  player1 = Player.new("Player 1")
-  player2 = Player.new("Player 2")
+  player1 = Player.new('Player 1', 1)
+  player2 = Player.new('Player 2', 2)
 
   player1.name = player1.get_player(player1)
   player2.name = player2.get_player(player2)
@@ -17,7 +17,7 @@ def play_game
 
   game = Game.new(player1, player2, board)
 
-  loop do 
+  loop do
     game.play_round(player1, board)
     if board.winner?(player1.symbol)
       game.game_over(player1, board)
@@ -34,11 +34,3 @@ def play_game
 end
 
 play_game
-
-
-
-
-
-
-
-

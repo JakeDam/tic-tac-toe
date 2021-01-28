@@ -7,4 +7,4 @@
   <li>Enter names for Player 1 and Player 2 to start the game.</li>
   <li>Choose spaces to place X's and O's and try to get 3 in a row to win!</li>
 </ul>
-<p>While working on this project I learned about object oriented programming in Ruby.</p>
+<p>While working on this project I became much more comfortable with object oriented programming in Ruby.</p>

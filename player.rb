@@ -2,6 +2,7 @@
 
 # Houses information about players in the game
 class Player
+  include Interface
   attr_accessor :name, :player_number, :symbol
 
   def initialize(name, number)

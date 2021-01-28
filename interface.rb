@@ -2,10 +2,6 @@
 
 # Handles interfacing with the player
 module Interface
-  def greeting
-    puts "Let's play Tic-Tac-Toe!"
-  end
-
   def get_player(player)
     puts "Enter name for Player #{player.player_number}."
     gets.chomp

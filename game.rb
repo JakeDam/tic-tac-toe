@@ -11,7 +11,6 @@ class Game
   end
 
   def inspect_input(input, player, board)
-    prompt(player)
     if input.between?(1, 9) == false
       puts 'Please enter a valid number.'
     elsif board.update_board(input, player.symbol) == false
@@ -24,9 +23,8 @@ class Game
 
   def play_round(player, board)
     prompt(player)
-    while (input = gets.chomp.to_i)
-      inspect_input(input, player, board)
-    end
+    input = gets.chomp.to_i
+    inspect_input(input, player, board)
   end
 
   def start_new_game(player, board)
